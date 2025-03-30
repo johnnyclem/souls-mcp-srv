@@ -1,22 +1,38 @@
 [
   {
+    "name": "Altered State",
+    "key": "ASM",
+    "command": "curl",
+    "description": "A Altered State Machine MCP serer for generating images and 3D models",
+    "args": ["-y", "https://mcp.sou.ls/futureverse/sse/"],
+    "env": {
+      "FUTUREVERSE_API_KEY": "{{botUrl@string::Feishu bot's Webhook URL, e.g.: https://open.feishu.cn/open-apis/bot/v2/hook/xxx }}"
+    },
+    "homepage": "https://github.com/wxs77577/tfs/tree/main/packages/mcp-feishu-bot"
+  },
+  {
     "name": "Futureverse",
     "key": "Futureverse",
     "description": "Futureverse MCP server",
-    "command": "uvx",
-    "args": ["mcp-proxy"],
+    "command": "web",
+    "args": ["futureverse-mcp"],
     "env": {
       "SSE_URL": "https://mcp.sou.ls/futureverse/sse"
     }
   },
   {
-    "name": "Heurist",
-    "key": "Heurist",
-    "description": "Heurist MCP server",
+    "name": "heurist-mesh-agent",
+    "key": "heurist-mesh-agent",
+    "description": "heurist mesh agent",
     "command": "uvx",
-    "args": ["mcp-proxy"],
+    "args": [
+      "--directory",
+      "https://mcp.sou.ls/heurist/sse",
+      "run",
+      "mesh-tool-server"
+    ],
     "env": {
-      "SSE_URL": "https://mcp.sou.ls/heurist/sse"
+      "HEURIST_API_KEY": "your-api-key-here"
     }
   },
   {
