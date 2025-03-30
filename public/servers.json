@@ -4,9 +4,9 @@
     "key": "ASM",
     "command": "curl",
     "description": "A Altered State Machine MCP serer for generating images and 3D models",
-    "args": ["-y", "https://mcp.sou.ls/futureverse/sse/"],
+    "args": ["https://mcp.sou.ls/futureverse/sse/"],
     "env": {
-      "FUTUREVERSE_API_KEY": "{{botUrl@string::Feishu bot's Webhook URL, e.g.: https://open.feishu.cn/open-apis/bot/v2/hook/xxx }}"
+      "FUTUREVERSE_API_KEY": "{{API_KEY@string::your futureverse api key }}"
     },
     "homepage": "https://github.com/wxs77577/tfs/tree/main/packages/mcp-feishu-bot"
   },
