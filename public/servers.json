@@ -2,38 +2,34 @@
   {
     "name": "Altered State",
     "key": "ASM",
-    "command": "curl",
+    "command": "",
     "description": "A Altered State Machine MCP serer for generating images and 3D models",
-    "args": ["https://mcp.sou.ls/futureverse/sse/"],
+    "args": [],
     "env": {
       "FUTUREVERSE_API_KEY": "{{API_KEY@string::your futureverse api key }}"
-    },
-    "homepage": "https://github.com/wxs77577/tfs/tree/main/packages/mcp-feishu-bot"
+    }
   },
   {
     "name": "Futureverse",
     "key": "Futureverse",
     "description": "Futureverse MCP server",
-    "command": "web",
+    "command": "",
     "args": ["futureverse-mcp"],
     "env": {
       "SSE_URL": "https://mcp.sou.ls/futureverse/sse"
-    }
+    },
+    "type": "hosted"
   },
   {
     "name": "heurist-mesh-agent",
     "key": "heurist-mesh-agent",
     "description": "heurist mesh agent",
-    "command": "uvx",
-    "args": [
-      "--directory",
-      "https://mcp.sou.ls/heurist/sse",
-      "run",
-      "mesh-tool-server"
-    ],
+    "command": "",
+    "args": [],
     "env": {
-      "HEURIST_API_KEY": "your-api-key-here"
-    }
+      "HEURIST_API_KEY": "{{API_KEY@string::your heurist api key }}""
+    },
+    "type": "hosted"
   },
   {
     "name": "Apple Notes",
