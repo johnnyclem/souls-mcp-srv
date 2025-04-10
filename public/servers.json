@@ -18,5 +18,153 @@
         "url": "https://mcp.sou.ls/futureverse/sse",
         "command": " ",
         "args": []
+    },
+    {
+        "name": "National Parks": 
+        "key": "national-parks",
+        "description": "information about united states national parks",
+        "type": "local",
+        "command": "npx",
+        "args": [
+            "nationalparks": {
+      "command": "npx",
+      "args": [
+          "-y", 
+          "mcp-server-nationalparks"
+      ],
+      "env": {
+        "NPS_API_KEY": "Qp4tbOktDId9I1pkkipRaL56j4VuHJCinKVlGQ3t"
+      }
+    },
+    {
+      "name": "Time",
+      "key": "Time",
+      "description": "A Model Context Protocol server providing tools for time queries and timezone conversions for LLMs",
+      "type": "local",
+      "command": "uvx",
+      "args": [
+        "mcp_simple_timeserver"
+      ],
+      "env": {
+        "local-timezone": "Central/Chicago"
+      }
+    },
+    {
+      "name": "Web",
+      "key": "Web",
+      "description": "A Model Context Protocol server that provides web content fetching capabilities",
+      "type": "local",
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ]
+    },  
+    {
+      "name": "Shell",
+      "key": "Shell",
+      "description": "A Node.js MCP implementation enables secure shell command execution for AI models.",
+      "type": "local",
+      "command": "npx",
+      "args": [
+        "-y",
+        "https://github.com/hdresearch/mcp-shell"
+      ]
+    },
+    {
+      "key": "MacOs",
+      "description": "A Model Context Protocol server that provides macOS-specific system information and operations.",
+      "type": "local",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mcp-get-community/server-macos"
+      ]
+    },
+    {
+      "name": "Heurist (official)",
+      "key": "heurist-main",
+      "type": "hosted",
+      "url": "https://sequencer-v2.heurist.xyz/mcp/sse",
+      "command": "",
+      "args": []
+    },
+    {
+      "name": "File System",
+      "key": "file-system",
+      "description": "The server will only allow operations within directories specified via args.",
+      "type": "local",
+      "command": "npx",
+      "args": [
+        "-y,",
+        "@modelcontextprotocol/server-filesystem",
+        "~/Desktop"
+      ]
+    },
+    {
+      "name": "X/Twitter",
+      "key": "x-twitter",
+      "description": "This MCP server allows Clients to interact with Twitter, enabling posting tweets and searching Twitter.",
+      "type": "local",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@enescinar/twitter-mcp"
+      ],
+      "env": {
+        "API_KEY": "your_api_key_here",
+        "API_SECRET_KEY": "your_api_secret_key_here",
+        "ACCESS_TOKEN": "your_access_token_here",
+        "ACCESS_TOKEN_SECRET": "your_access_token_secret_here"
+      }
+    },
+    {
+      "name": "Sequential Thinking",
+      "key": "sequential-thinking",
+      "description": "An MCP server tool for dynamic problem-solving with structured thinking. ",
+      "type": "local",
+      "command": "npx",
+      "args": [
+        "-y",
+        "--quiet",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    {
+      "name": "Slack",
+      "key": "slack",
+      "description": "MCP Server for the Slack API, enabling Claude to interact with Slack workspaces.",
+      "type": "local",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-slack"
+      ],
+      "env": {
+        "API_KEY": "your_api_key_here"
+      }
+    },
+    {
+      "name": "Linear",
+      "key": "linear",
+      "description": "This server allowing LLMs to interact with Linear issues. ",
+      "type": "local",
+      "command": "npx",
+      "args": [
+        "-y",
+        "linear-mcp-server"
+      ],
+      "env": {
+        "LINEAR_API_KEY": "your_api_key_here"
+      }
+    },
+    {
+      "name": "Blender",
+      "key": "blender",
+      "description": "a blender mcp server enables prompt assisted 3D modeling, scene creation, and manipulation",
+      "type": "local",
+      "command": "uvx",
+      "args": [
+        "blender-mcp"
+      ]
     }
 ]
