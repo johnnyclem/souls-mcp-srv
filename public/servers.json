@@ -1,135 +1,22 @@
 [
-  {
-    "name": "Altered State",
-    "key": "ASM",
-    "command": "",
-    "description": "A Altered State Machine MCP serer for generating images and 3D models",
-    "args": [],
-    "env": {
-      "FUTUREVERSE_API_KEY": "{{API_KEY@string::your futureverse api key }}"
+    {
+        "name": "Apple Tools",
+        "key": "apple-tools",
+        "description": "Messages, Notes, Contacts, Email, Reminders",
+        "type": "local",
+        "command": "npx",
+        "args": [
+            "-y",
+            "https://github.com/Dhravya/apple-mcp.git"
+        ]
+    },
+    {
+        "name": "Altered State Machine",
+        "key": "asm",
+        "description": "text-to-image, text-to-3d, meme machine, model-rigging, model-animation",
+        "type": "hosted",
+        "url": "https://mcp.sou.ls/futureverse/sse",
+        "command": "",
+        "args": []
     }
-  },
-  {
-    "name": "Futureverse",
-    "key": "Futureverse",
-    "description": "Futureverse MCP server",
-    "command": "",
-    "args": ["futureverse-mcp"],
-    "env": {
-      "SSE_URL": "https://mcp.sou.ls/futureverse/sse"
-    },
-    "type": "hosted"
-  },
-  {
-    "name": "heurist-mesh-agent",
-    "key": "heurist-mesh-agent",
-    "description": "heurist mesh agent",
-    "command": "",
-    "args": [],
-    "env": {
-      "HEURIST_API_KEY": "{{API_KEY@string::your heurist api key }}""
-    },
-    "type": "hosted"
-  },
-  {
-    "name": "Apple Notes",
-    "key": "AppleNotes",
-    "command": "uvx",
-    "description": "The server implements the ability to read and write to your Apple Notes. Require Python>=3.12.",
-    "args": ["apple-notes-mcp"],
-    "homepage": "https://github.com/sirmews/apple-notes-mcp"
-  },
-  {
-    "name": "Blender",
-    "key": "Blender",
-    "description": "a blender mcp server enables prompt assisted 3D modeling, scene creation, and manipulation",
-    "command": "uvx",
-    "args": ["blender-mcp"],
-    "homepage": "https://github.com/ahujasid/blender-mcp"
-  },
-  {
-    "name": "File System",
-    "key": "FileSystem",
-    "command": "npx",
-    "description": "The server will only allow operations within directories specified via args.",
-    "args": [
-      "-y",
-      "@modelcontextprotocol/server-filesystem",
-      "{{dirs@list::directories you about to access. Trailing slash in path required.}}"
-    ],
-    "homepage": "https://github.com/modelcontextprotocol/servers"
-  },
-  {
-    "key": "Linear",
-    "command": "npx",
-    "description": "This server allowing LLMs to interact with Linear issues.",
-    "args": ["-y", "linear-mcp-server"],
-    "env": {
-      "LINEAR_API_KEY": "{{apiKey@string::Get the api key from linear.app}}"
-    },
-    "homepage": "https://github.com/jerhadf/linear-mcp-server"
-  },
-  {
-    "key": "MacOs",
-    "command": "npx",
-    "description": "A Model Context Protocol server that provides macOS-specific system information and operations.",
-    "args": ["-y", "@mcp-get-community/server-macos"],
-    "homepage": "https://mcp-get.com/packages/%40mcp-get-community%2Fserver-macos"
-  },
-  {
-    "name": "Sequential Thinking",
-    "key": "SequentialThinking",
-    "command": "npx",
-    "description": "An MCP server tool for dynamic problem-solving with structured thinking.",
-    "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
-    "homepage": "https://github.com/modelcontextprotocol/servers"
-  },
-  {
-    "key": "Shell",
-    "command": "npx",
-    "description": "A Node.js MCP implementation enables secure shell command execution for AI models.",
-    "args": ["-y", "mcp-shell"],
-    "homepage": "https://github.com/hdresearch/mcp-shell"
-  },
-  {
-    "key": "Slack",
-    "command": "npx",
-    "description": "MCP Server for the Slack API, enabling Claude to interact with Slack workspaces.",
-    "args": ["-y", "@modelcontextprotocol/server-slack"],
-    "env": {
-      "SLACK_BOT_TOKEN": "{{botToken@string::Your slack bot token}}",
-      "SLACK_TEAM_ID": "{{teamId@string::Your slack team id}}"
-    },
-    "homepage": "https://github.com/modelcontextprotocol/servers"
-  },
-  {
-    "key": "Web",
-    "command": "uvx",
-    "description": "A Model Context Protocol server that provides web content fetching capabilities",
-    "args": ["mcp-server-fetch"],
-    "homepage": "https://pypi.org/project/mcp-server-fetch/"
-  },
-  {
-    "key": "Twitter",
-    "command": "npx",
-    "description": "This MCP server allows Clients to interact with Twitter, enabling posting tweets and searching Twitter.",
-    "args": ["-y", "@enescinar/twitter-mcp"],
-    "env": {
-      "API_KEY": "{{apiKey@string::You can get the API_KEY from https://developer.twitter.com/}}",
-      "API_SECRET_KEY": "{{apiSecret@string::You can get the API_SECRET_KEY from https://developer.twitter.com/m}}",
-      "ACCESS_TOKEN": "{{accessToken@string::You can get the ACCESS_TOKEN from https://developer.twitter.com/}}",
-      "ACCESS_TOKEN_SECRET": "{{accessSecret@string::You can get the ACCESS_TOKEN_SECRET from https://developer.twitter.com/}}"
-    },
-    "homepage": "https://github.com/EnesCinr/twitter-mcp"
-  },
-  {
-    "key": "Time",
-    "command": "uvx",
-    "description": "A Model Context Protocol server providing tools for time queries and timezone conversions for LLMs",
-    "args": [
-      "mcp-server-time",
-      "--local-timezone={{timezone@string::like Asia/Shanghai. You may need install tzdata first}}"
-    ],
-    "homepage": "https://github.com/modelcontextprotocol/servers"
-  }
 ]
